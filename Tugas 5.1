@@ -1,0 +1,19 @@
+def perkalian(x, y):
+  """
+  Fungsi ini menghitung perkalian dua bilangan dengan menggunakan penjumlahan.
+
+  Args:
+    x: Bilangan pertama.
+    y: Bilangan kedua.
+
+  Returns:
+    Hasil perkalian x dan y.
+  """
+  hasil = 0
+  for i in range(y):
+    hasil += x
+  return hasil
+
+# Contoh penggunaan fungsi
+print(perkalian(6, 5)) # Output: 30
+print(perkalian(7, 10)) # Output: 70
