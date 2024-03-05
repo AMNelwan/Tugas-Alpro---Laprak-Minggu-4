@@ -1,0 +1,38 @@
+def hitung_ips(jumlah_matkul):
+  """
+  Fungsi ini menghitung nilai Indeks Prestasi Semester (IPS).
+
+  Args:
+    jumlah_matkul: Jumlah mata kuliah yang diambil.
+
+  Returns:
+    Nilai IPS.
+  """
+  total_bobot = 0
+  total_sks = 0
+  for i in range(jumlah_matkul):
+    nilai = input("Masukkan nilai mata kuliah ke-%d (A/B/C/D): " % (i + 1))
+    if nilai == "A":
+      bobot = 4
+    elif nilai == "B":
+      bobot = 3
+    elif nilai == "C":
+      bobot = 2
+    elif nilai == "D":
+      bobot = 1
+    else:
+      print("Nilai tidak valid!")
+      return
+
+    total_bobot += bobot
+    total_sks += 3
+
+  ips = total_bobot / total_sks
+  return ips
+
+# Contoh penggunaan fungsi
+jumlah_matkul = int(input("Masukkan jumlah mata kuliah: "))
+
+ips = hitung_ips(jumlah_matkul)
+
+print("Nilai IPS: %.2f" % ips)
