@@ -1,0 +1,20 @@
+def ganjil(bawah, atas):
+  """
+  Fungsi ini menampilkan deret bilangan ganjil dari batas bawah dan batas atas yang diberikan.
+
+  Args:
+    bawah: Batas bawah deret bilangan.
+    atas: Batas atas deret bilangan.
+  """
+  if bawah < atas:
+    # Deret dari kecil ke besar
+    for i in range(bawah + 1, atas + 2, 2):
+      print(i, end=" ")
+  else:
+    # Deret dari besar ke kecil
+    for i in range(bawah - 1, atas - 2, -2):
+      print(i, end=" ")
+
+# Contoh penggunaan fungsi
+bawah = int(input("Masukkan batas bawah: "))
+atas = int(input("Masukkan batas atas: "))
